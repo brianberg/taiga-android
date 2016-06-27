@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!-- Material Palette -->
+  <color name="primary">#3C3647</color>
+  <color name="primary_dark">#24202a</color>
+  <color name="accent">#85B18C</color>
+  <!-- General -->
+  <color name="white">#FFF</color>
+  <color name="grey">#757575</color>
+  <color name="black">#000</color>
+  <!-- Light BackgroundColors -->
+  <color name="light_text">#de000000</color>
+  <color name="light_icon">#8a000000</color>
+  <color name="light_hint">#61000000</color>
+  <color name="light_divider">#1F000000</color>
+  <!-- Dark Background Colors -->
+  <color name="dark_text">#FFFFFF</color>
+  <color name="dark_icon">#b3FFFFFF</color>
+  <color name="dark_hint">#4dFFFFFF</color>
+  <color name="dark_divider">#1FFFFFFF</color>
+</resources>

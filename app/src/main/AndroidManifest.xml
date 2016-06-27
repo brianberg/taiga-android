@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="co.brianberg.taiga"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <uses-permission android:name="android.permission.INTERNET"/>
+  <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+  <uses-permission android:name="android.permission.READ_PROFILE"/>
+  <uses-permission android:name="android.permission.READ_CONTACTS"/>
+
+  <application
+      android:allowBackup="true"
+      android:icon="@mipmap/ic_launcher"
+      android:label="@string/app_name"
+      android:supportsRtl="true"
+      android:theme="@style/AppTheme">
+    <activity
+        android:name=".auth.LoginActivity"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme.Dark">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+
+        <category android:name="android.intent.category.LAUNCHER"/>
+      </intent-filter>
+    </activity>
+    <activity
+        android:name=".projects.ProjectListActivity"
+        android:label="@string/title_activity_project_list"
+        android:theme="@style/AppTheme.NoActionBar">
+    </activity>
+    <activity
+        android:name=".projects.ProjectDetailActivity"
+        android:label="@string/title_project_detail"
+        android:parentActivityName=".projects.ProjectListActivity"
+        android:theme="@style/AppTheme.NoActionBar">
+      <meta-data
+          android:name="android.support.PARENT_ACTIVITY"
+          android:value="co.brianberg.taiga.projects.ProjectListActivity"/>
+    </activity>
+    <activity
+        android:name=".timeline.ProjectTimelineActivity"
+        android:label="@string/title_activity_timeline"
+        android:theme="@style/AppTheme.NoActionBar">
+      <meta-data
+        android:name="android.support.PARENT_ACTIVITY"
+        android:value="co.brianberg.taiga.projects.ProjectDetailActivity"/>
+    </activity>
+  </application>
+
+</manifest>

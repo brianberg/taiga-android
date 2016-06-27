@@ -1,0 +1,63 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".projects.ProjectDetailFragment">
+
+  <TextView
+      android:id="@+id/project_detail_desc"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:padding="@dimen/activity_horizontal_margin"
+      android:gravity="center"
+      android:textColor="@color/black"
+      android:textAppearance="@android:style/TextAppearance.Material.Medium"/>
+
+  <View
+      android:layout_width="match_parent"
+      android:layout_height="1dp"
+      android:layout_marginStart="@dimen/activity_horizontal_margin"
+      android:layout_marginEnd="@dimen/activity_horizontal_margin"
+      style="@style/Divider"/>
+
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:padding="@dimen/activity_vertical_margin"
+      android:textAllCaps="true"
+      android:text="@string/latest_updates"
+      android:visibility="gone"
+      android:textAppearance="@android:style/TextAppearance.Material.Small"/>
+
+  <ProgressBar
+      android:id="@+id/progress_project_timeline"
+      android:layout_width="56dp"
+      android:layout_height="56dp"
+      android:layout_margin="@dimen/activity_vertical_margin"
+      android:indeterminate="true"
+      android:indeterminateTint="@color/primary"
+      style="?android:attr/progressBarStyleLarge"/>
+
+  <android.support.v7.widget.RecyclerView
+      android:id="@+id/project_timeline_list"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:visibility="gone"
+      app:layoutManager="LinearLayoutManager"
+      tools:listitem="@layout/project_timeline_list_item"/>
+
+  <Button
+      android:id="@+id/btn_view_project_timeline"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/view_all_updates"
+      android:visibility="gone"
+      android:textColor="@color/primary"
+      android:background="@android:color/transparent"
+      style="?android:attr/borderlessButtonStyle"/>
+
+</LinearLayout>
